@@ -1,18 +1,18 @@
-# 1.Write a Python program to maintain Book details like book_code, book_name, price and
+# 4.Write a python program to maintain Student details like roll_no, name, section and
 # implement all the operations PUSH, POP, PEEK, SEARCH, LIST using stack data-
 # structure (list).
 
 
 stack = []
 # structure of stack:
-# [book_code, book_name, price]
+# [roll_no, name, section]
 
 
 def push(stack):
-    book_code = input("Enter Book Code: ")
-    book_name = input("Enter Book Name: ")
-    price = input("Enter Price: ")
-    stack.append([book_code, book_name, price])
+    roll_no = input("Enter Roll No.: ")
+    name = input("Enter Name: ")
+    section = input("Enter section: ")
+    stack.append([roll_no, name, section])
     print("\n\n## PUSHED ##\n\n")
 def pop(stack):
     popped_element = stack.pop()
@@ -22,15 +22,15 @@ def peek(stack):
     print(f"\n\n##TOP: {peek} ##\n\n")
 def search(stack):
     found = False
-    book_code = input("Enter Book Code: ")
+    roll_no = input("Enter Roll No.: ")
     for i in stack:
-        if i[0] == book_code:
+        if i[0] == roll_no:
             found = True 
             print(f'''\n\n FOUND! 
-Book Code: {i[0]}
-Book Name: {i[1]}
-Price: {i[2]}''')
-    if found == False: print("Book Not Found \n\n")
+Roll No.: {i[0]}
+Name: {i[1]}
+section: {i[2]}''')
+    if found == False: print("Student Not Found \n\n")
 
 
 
@@ -41,7 +41,7 @@ def list_entries(stack):
 
 
 while True:
-    print('''\t## STACK OPERATIONS ##
+    print('''\t## Student Details ##
 1. Push
 2. Pop
 3. Peek
