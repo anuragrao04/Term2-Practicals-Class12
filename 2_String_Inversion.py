@@ -3,5 +3,4 @@
 # be ee dd cc bb aa)
 
 string = input("Enter String to invert: ")[::-1]
-print("Reversed string(twice): ")
 for i in string: print(i*2, end = "")

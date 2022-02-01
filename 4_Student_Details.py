@@ -15,8 +15,12 @@ def push(stack):
     stack.append([roll_no, name, section])
     print("\n\n## PUSHED ##\n\n")
 def pop(stack):
-    popped_element = stack.pop()
-    print(f"\n\n##POPPED: {popped_element} ##\n\n")
+
+    try:
+        popped_element = stack.pop()
+        print(f"\n\n##POPPED: {popped_element} ##\n\n")
+    except:
+        print("## UNDERFLOW ##")    
 def peek(stack):
     peek = stack[-1]
     print(f"\n\n##TOP: {peek} ##\n\n")
